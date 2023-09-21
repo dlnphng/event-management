@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+.navbar h1 {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+#intro {
+    background-color: #1F2D3D;
+    padding: 40px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.introduction,
+.image {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.introduction {
+    margin-right: 50px;
+    /* Adjust the margin to control the space */
+}
+
+.image img {
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#intro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #FFD100;
+}
+
+#intro p {
+    width: 500px;
+    margin: 0 auto;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+#admin-panel {
+    padding-bottom: 10px;
+}
+
+#admin-panel h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+#admin-panel h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', sans-serif;
+    color: #1F2D3D;
+}
+
+.panel-task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task {
+    display: flex;
+    width: 900px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Optional: Center-align text within buttons */
+}
+
+.task1 {
+    align-items: center;
+    display: block;
+    margin-bottom: 10px;
+    /* Spacing between buttons */
+}
+
+.task2 {
+    display: block;
+    margin-bottom: 10px;
+    /* Spacing between buttons */
+}
+
+button {
+    font-family: 'Gill Sans', sans-serif;
+    height: 29px;
+    width: 180px;
+}
+
+footer {
+    font-size: 10px;
+    padding-left: 5%;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-info {
+    margin-right: 30px;
+    /* Add space to the right of this section */
+}
+
+footer h2 {
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.box {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 165px;
+}
+
+.box p{
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 20px;
+}
+.box h3 {
+    margin: 0;
+    padding: 0;
+}
