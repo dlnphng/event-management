@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <title>Home Page</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Event Management App</h1>
+    </div>
+
+    <section id="intro">
+        <div class="introduction">
+            <h2>Welcome to EMA!</h2>
+            <p>Embark on a journey of sports and excitement with our very own Events Management Application (EMA)! We're
+                delighted to introduce you to a dynamic platform that's been meticulously crafted to enhance your event
+                experience. Whether you're a dedicated sports enthusiast, an aspiring event organizer, or simply curious
+                to explore new opportunities, EMA has been tailored to cater to all.</p>
+        </div>
+        <div class="image">
+            <img src="logo.png" alt="event-logo" height="200">
+        </div>
+    </section>
+
+    <section id="admin-panel">
+        <h2>Admin Panel</h2>
+        <div class="container">
+            <div class="box">
+                <h3>Events</h3>
+                <p><%= eventTotal %></p>
+            </div>
+        
+            <div class="box">
+                <h3>Categories</h3>
+                <p><%= catgTotal %></p>
+            </div>
+        
+            <div class="box">
+                <h3>Records Created</h3>
+                <p><%= counter.addCount %></p>
+            </div>
+
+            <div class="box">
+                <h3>Records Updates</h3>
+                <p><%= counter.updateCount %></p>
+            </div>
+
+            <div class="box">
+                <h3>Records Deleted</h3>
+                <p><%= counter.deleteCount %></p>
+            </div>
+
+        </div>
+        <div class="panel-task">
+            <div class="task">
+                <h3>Task Group 1</h3>
+
+                <a href="/studentID/32667817/add-category" class="task1">
+                    <button>Add Category</button>
+                </a>
+
+                <a href="/studentID/32667817/list-event-categories" class="task1">
+                    <button>List all Category</button>
+                </a>
+                <a href="/studentID/32667817/list-event-categories" class="task1">
+                    <button>List Categories by Keyword</button>
+                </a>
+                <a href="/studentID/32667817/event/sampleID" class="task1">
+                    <button>Show Event Details</button>
+                </a>
+                <a href="/studentID/32667817/delete-category" class="task1">
+                    <button>Delete Category by ID</button>
+                </a>
+            </div>
+            <div class="task">
+                <h3>Task Group 2</h3>
+                <a href="/studentName/phuong/add-event" class="task2">
+                    <button>Add Event</button>
+                </a>
+                <a href="/studentName/phuong/events" class="task2">
+                    <button>List all Events</button>
+                </a>
+                <a href="/studentName/phuong/sold-out-events" class="task2">
+                    <button>List Sold Out Events</button>
+                </a>
+                <a href="/studentName/phuong/category/sampleID" class="task2">
+                    <button>Category Detail Page</button>
+                </a>
+                <a href="/studentName/phuong/delete-event" class="task2">
+                    <button>Delete Event by ID</button>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <section class="personal-info">
+        <h2>FIT 2095 - Assignment 1</h2>
+        <h3>Phuong Anh Chu</h3>
+        <p>ID:32667817</p>
+        <h3>Phuong Do</h3>
+        <p>ID:32278156</p>
+    </section>
+    <section>
+        <img src="banner.png" alt="team banner">
+    </section>
+</footer>
+
+</html>

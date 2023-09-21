@@ -1,0 +1,48 @@
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <title>Delete Event Page</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="delete-catg-event.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Event Management App</h1>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/studentName/phuong/add-event">Add Event</a></li>
+            <li><a href="/studentName/phuong/events">Event List</a></li>
+            <li><a href="/studentName/phuong/sold-out-events">Sold Out Events</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Delete Event Form</h2>
+        <h3>Fill in an existing ID to remove a category</h3>
+
+        <div class="row  row-cols-med-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form action="/studentName/phuong/event/remove" method="POST">
+                        <div class="mb-3">
+                            <label for="id" class="form-label">Event ID</label>
+                            <input type="text" name="id" class="form-control" id="id"
+                                placeholder="Enter event id (e.g EXX-1234)" required pattern="E[A-Z]{2}-\d{4}" />
+                        </div>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="instruction">
+        <h2>Delete Event Instruction</h2>
+        <p>Use this format: http://localhost:8080/studentName/phuong/event/remove?id=[eventID]</p>
+        <p><strong>Example: </strong>http://localhost:8080/studentName/phuong/event/remove?id=EXY-3204</p>
+    </div>
+
+</body>
+
+</html>

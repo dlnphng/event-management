@@ -1,0 +1,77 @@
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <title>Category List Page</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="list-catg-event.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Event Management App</h1>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/studentID/32667817/add-category">Add Category</a></li>
+            <li><a href="/studentID/32667817/delete-category">Delete Category</a></li>
+        </ul>
+    </div>
+    <h2>Category List</h2>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <form action="/studentID/32667817/search-catg-post" method="POST">
+                    <div class="input-group">
+                        <input type="text" name="keyword" class="form-control" id="keyword"
+                            placeholder="Input keyword and press Enter to search" value="<%= keyword %>">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 g-3">
+        <div class="col">
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Created Date</th>
+                        <th scope="col">Action</th>
+
+                    </tr>
+                </thead>
+
+                <tbody class="table-group-divider">
+                    <% for (let i=0; i <catgDB.length; i++){ %>
+                        <tr>
+                            <th scope="row">
+                                <%= catgDB[i].id %>
+                            </th>
+                            <td>
+                                <%= catgDB[i].name %>
+                            </td>
+                            <td>
+                                <%= catgDB[i].description %>
+                            </td>
+                            <td><img src=<%=catgDB[i].image %> width="200" height="150"></td>
+                            <td>
+                                <%= catgDB[i].createdAt %>
+                            </td>
+                            <td> <a type="button" class="btn btn-primary" href="/studentName/phuong/category/<%= catgDB[i].id %>">Find out
+                                    more!</a></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

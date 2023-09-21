@@ -1,0 +1,63 @@
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <title>Add Category Page</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="add-catg.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Event Management App</h1>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/studentID/32667817/list-event-categories">Category List</a></li>
+            <li><a href="/studentID/32667817/delete-category">Delete Category</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Add Category</h2>
+        <h3>Fill in new Category details & Submit</h3>
+        <h4>
+            <%= errorMessage %>
+        </h4>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form action="/studentID/32667817/add-catg-post" method="POST">
+                            <div class="mb-3">
+                                <label for="catgName" class="form-label">Name</label>
+                                <input type="text" name="catgName" class="form-control" id="catgName" required
+                                    pattern="[A-Za-z0-9 ]+" placeholder="Enter category name (alphanumeric required)" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="catgDesc" class="form-label">Description (Optional)</label>
+                                <input type="text" name="catgDesc" class="form-control" id="catgDesc"
+                                    placeholder="Add description" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="catgImage" class="form-label">Image Path (Optional - if no matching images,
+                                    default.jpg will be used)</label>
+                                <input type="text" name="catgImage" class="form-control" id="catgImage"
+                                    placeholder="Enter with format 'imgName'.jpg (e.g logo.jpg)" />
+                            </div>
+
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

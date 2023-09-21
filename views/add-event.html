@@ -1,0 +1,91 @@
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <title>Add Event Page</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="add-event.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Event Management App</h1>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/studentName/phuong/events">Event List</a></li>
+            <li><a href="/studentName/phuong/sold-out-events">Sold Out Events</a></li>
+            <li><a href="/studentName/phuong/delete-event">Delete Event</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Add Event</h2>
+        <h3>Fill in new Event details & Submit</h3>
+        <div class="input">
+            <form action="/studentName/phuong/add-event-post" method="POST">
+                <div class="info">
+                    <label for="eventName" class="form-label">Name</label>
+                    <input type="text" name="eventName" class="form-control" id="eventName"
+                        required pattern="[A-Za-z0-9 ]+"
+                        placeholder="Enter category name (alphanumeric required)" />
+                </div>
+
+                <div class="info">
+                    <label for="eventDesc" class="form-label">Description</label>
+                    <textarea type="text" name="eventDesc" class="form-control" id="eventDesc"
+                        placeholder="Enter the description"></textarea>
+                </div>
+
+                <div class="info">
+                    <label for="eventImage" class="form-label">Image Path</label>
+                    <input type="text" name="eventImage" class="form-control" id="eventImage"
+                        placeholder="Enter path to static resource 940x470" />
+                </div>
+
+                <div class="info">
+                    <label for="eventDateTime" class="form-label">Start Date/Time</label>
+                    <input type="datetime-local" name="eventDateTime" class="form-control" id="eventDateTime"
+                        placeholder="dd/mm/yyyy, --:--" required />
+                </div>
+
+                <div class="info">
+                    <label for="eventDuration" class="form-label">Duration (Minutes)</label>
+                    <input type="number" name="eventDuration" class="form-control" id="eventDuration"
+                        placeholder="Event duration in minutes" required min="0" />
+                </div>
+
+                <div class="info-checkbox">
+                    <label for="isActive" class="form-label">Is Active</label>
+                    <input type="checkbox" name="isActive" class="form-control-checkbox" id="isActive" checked />
+                </div>
+
+                <div class="info">
+                    <label for="eventCapacity" class="form-label">Capacity</label>
+                    <input type="number" name="eventCapacity" class="form-control" id="eventCapacity"
+                        placeholder="Event capacity" min="10" max="2000" />
+                </div>
+
+                <div class="info">
+                    <label for="eventTickets" class="form-label">Tickets Available</label>
+                    <input type="number" name="eventTickets" class="form-control" id="eventTickets"
+                        placeholder="Tickets Available (Optional)" min="0" />
+                </div>
+
+                <div class="info">
+                    <label for="eventCategory" class="form-label">Category ID</label>
+                    <input type="text" name="eventCategory" class="form-control" id="eventCategory"
+                        placeholder="Enter the Category ID"/>
+                </div>
+
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

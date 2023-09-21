@@ -1,0 +1,88 @@
+<html lang="en">
+    <head>
+        <base href="/">
+        <title>Category Details Page</title>
+        <link href="bootstrap.min.css" rel="stylesheet" />
+        <link href="catg-detail.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class = "navbar">
+            <h1>Event Management App</h1>
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/studentID/32667817/list-event-categories">Category List</a></li>
+                <li><a href="/studentID/32667817/add-category">Add Category</a></li>
+                <li><a href="/studentID/32667817/delete-category">Delete Category</a></li>
+            </ul>
+        </div>
+        <section class="image-container">
+            <img src=<%= catg.image %>> 
+        </section>
+
+        <h2 class="title"><%= catg.name %></h2>
+        <section class="info">
+            
+            <h3>ID: <%= catg.id %></h3>
+            <h3>Name: <%= catg.name %></h3>
+
+            <h3>Description:</h3>
+            <p><%= catg.description %></p>
+
+            <h3>Created At: <%= catg.createdAt %></h3>
+            
+        </section>
+
+        <section class="event-list">
+            <h2>Events in this Category</h2>
+            <div class="row row-cols-1 g-3">
+                <div class="col">
+                    <div class="output">
+                        <table class="table table-hover">
+                            <!-- Render the list of events similar to listEvent.html -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Start</th>
+                                    <th scope="col">End</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Is Active</th>
+                                    <th scope="col">Capacity</th>
+                                    <th scope="col">Tickets Available</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <% for (let i = 0; i < event.length; i++) { %>
+                                    <tr>
+                                        <th scope="row"><%= event[i].id %></th>
+                                        <td><%= event[i].name %></td>
+                                        <td><%= event[i].startDateTime %></td>
+                                        <td><%= event[i].endDateTime %></td>
+                                        <td><%= event[i].durationInMinutes %></td>
+                                        <td>
+                                            <input type="checkbox" disabled <% if (event[i].isActive) { %>checked<% } %> />
+                                        </td>                            
+                                        <td><%= event[i].capacity %></td>
+                                        <td><%= event[i].ticketsAvailable %></td>
+        
+                                        <td> 
+                                            <a type="button" class="<%= status %>" 
+                                            href="/studentID/32667817/event/<%= event[i].id %>">View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>
